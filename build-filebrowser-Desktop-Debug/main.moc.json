@@ -1,0 +1,48 @@
+{
+    "classes": [
+        {
+            "className": "CursorPosProvider",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "cursorPos",
+                    "returnType": "QPointF"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "CursorPosProvider",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        },
+        {
+            "className": "Utils",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "window",
+                            "type": "QWindow*"
+                        }
+                    ],
+                    "name": "setAttrs",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "Utils",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "main.cpp",
+    "outputRevision": 67
+}

@@ -1,0 +1,160 @@
+[
+    {
+        "classes": [
+            {
+                "className": "BackEnd",
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "name": "userName",
+                        "notify": "userNameChanged",
+                        "read": "userName",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setUserName"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "name": "evnum",
+                        "read": "evnum",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setEvnum"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "name": "pressed",
+                        "notify": "pressChanged",
+                        "read": "pressed",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "press"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "name": "released",
+                        "notify": "releaseChanged",
+                        "read": "released",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "release"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "name": "closed",
+                        "notify": "closeChanged",
+                        "read": "closed",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "close"
+                    }
+                ],
+                "qualifiedClassName": "BackEnd",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "userNameChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "pressChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "closeChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "releaseChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "backend.h",
+        "outputRevision": 67
+    },
+    {
+        "classes": [
+            {
+                "className": "CursorPosProvider",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "cursorPos",
+                        "returnType": "QPointF"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "CursorPosProvider",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            },
+            {
+                "className": "Utils",
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "window",
+                                "type": "QWindow*"
+                            }
+                        ],
+                        "name": "setAttrs",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "Utils",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "main.cpp",
+        "outputRevision": 67
+    }
+]

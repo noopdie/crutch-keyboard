@@ -1,13 +1,64 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QWindow>
+#include <QQmlContext>
+#include "backend.h"
+#include <iostream>
+#include <thread>
+#include <QTextStream>
+
+class CursorPosProvider : public QObject
+{
+    Q_OBJECT
+public:
+    explicit CursorPosProvider(QObject *parent = nullptr) : QObject(parent)
+    {
+    }
+    virtual ~CursorPosProvider() = default;
+
+    Q_INVOKABLE QPointF cursorPos()
+    {
+        return QCursor::pos();
+    }
+};
+
+class Utils: public QObject{
+    Q_OBJECT
+public:
+    using QObject::QObject;
+    Q_INVOKABLE void setAttrs(QWindow *window){
+   //window->setFlags(Qt::WindowStaysOnTopHint |  Qt::FramelessWindowHint);
+    }
+};
+
+void task1()
+{
+    BackEnd backend;
+    backend.prepare();
+}
+void task2()
+{
+    BackEnd backend;
+    backend.readevent();
+}
+
 
 int main(int argc, char *argv[])
 {
+    std::thread t1(task1);
+//std::thread t2(task2);
+
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
 
+    Utils utils;
+    qmlRegisterType<BackEnd>("io.qt.examples.backend", 1, 0, "BackEnd");
     QQmlApplicationEngine engine;
+    CursorPosProvider mousePosProvider;
+
+    engine.rootContext()->setContextProperty("mousePosition", &mousePosProvider);
+    engine.rootContext()->setContextProperty("Utils", &utils);
 
     const QUrl mainQml(QStringLiteral("qrc:/main.qml"));
 
@@ -28,5 +79,7 @@ int main(int argc, char *argv[])
 
     engine.load(mainQml);
 
-    return app.exec();
+   app.exec();
 }
+#include "main.moc"
+
