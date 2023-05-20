@@ -1,24 +1,26 @@
-# Qt client side window decorations demo
+#crutch-keyboard - Virtual Keyboard for Wayland and Xorg.
+Works great on KDE Plasma Mobile and KDE Halcyon
 
-Project to test the API for cross-platform client side window decorations in Qt which was introduced in Qt 5.15 ([QTBUG-73011](https://bugreports.qt.io/browse/QTBUG-73011)).
+Currently under developement. Yet only supports english and russian layout.
 
-See the [blog post](https://www.qt.io/blog/custom-window-decorations) I wrote for details.
+Dependencies: evemu-tools, root access, qt5 libraries, sudo
 
-It should work on X11, Wayland, Windows and macOS (macOS has no resize support though).
+Compilation:
+1) Open Qt Creator
+2) Open file crutch-keyboard.pro
+3) Often it throws an error and asks to select a kit, i select "Desktop" in this case
+4) Press Run button, or `Ctrl+R`
 
-There are two demo applications in this project.
-
-The `filebrowser` demo should look something like this:
-
-![file browser screenshot](https://i.imgur.com/8otn3Ng.png)
-
-The other demo `webbrowser.qml` is just a single file, and can just be run with
-
-```sh
-$ qml webbrowser.qml
-```
-
-It should look like this:
-
-![web browser screenshot](https://i.imgur.com/c8IParL.png)
-# crutch-keyboard
+Installation:
+1) $ `git clone https://github.com/noopdie/crutch-keyboard.git`
+2) $ `cd crutch-keyboard`
+3) Make sure you can execute binary in crutch-keyboard-files folder (you shoud see a window of keyboard appear). If it doesn`t work, compile one for your system.
+4) $ `cp crutch-keyboard-files /`
+5) $ `cp crutch-keyboard-sudo /etc/sudoers.d`
+6) $ `sudo apt install evemu-tools`
+7) $ `sudo evemu-describe`
+8) Find address of your physical keyboard
+9) `Ctrl + C`
+10) $ `sudo evemu-describe /dev/input/event* /crutch-keyboard-files/vkb-device`
+11) $ `chmod + crutch-keyboard.desktop`
+That's it. You can open it by desktop file or by command `sudo /crutch-keyboard-files/crutch-keyboard

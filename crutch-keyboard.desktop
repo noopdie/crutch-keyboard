@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=sudo ./crutch-keyboard
+GenericName[en_US]=\sVirtual Keyboard for Wayland and Xorg.
+GenericName=\sVirtual Keyboard for Wayland and Xorg.
+Icon=input-keyboard
+MimeType=
+Name[en_US]=crutch-keyboard
+Name=crutch-keyboard
+Path=/crutch-keyboard-files
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
