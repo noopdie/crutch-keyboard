@@ -15,7 +15,7 @@ Installation:
 1) $ `git clone https://github.com/noopdie/crutch-keyboard.git`
 2) $ `cd crutch-keyboard`
 3) Make sure you can execute binary in crutch-keyboard-files folder (you shoud see a window of keyboard appear). If it doesn`t work, compile one for your system.
-4) $ `sudo cp crutch-keyboard-files /`
+4) $ `sudo cp -R crutch-keyboard-files /`
 5) $ `sudo cp crutch-keyboard-sudo /etc/sudoers.d`
 6) $ `sudo apt install evemu-tools`
 7) $ `sudo evemu-describe`
