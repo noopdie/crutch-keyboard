@@ -1,4 +1,4 @@
-#crutch-keyboard - Virtual Keyboard for Wayland and Xorg.
+# crutch-keyboard - Virtual Keyboard for Wayland and Xorg.
 Works great on KDE Plasma Mobile and KDE Halcyon
 
 Currently under developement. Yet only supports english and russian layout.
